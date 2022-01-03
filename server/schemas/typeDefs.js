@@ -1,11 +1,12 @@
+// import the gql tagged template function
 const { gql } = require('apollo-server-express');
 
-//graphql setup
 const typeDefs = gql`
 	type Book {
 		_id: ID!
 		bookId: String
 		authors: [String]
+		# authors: String
 		description: String
 		title: String
 		image: String
@@ -41,4 +42,5 @@ const typeDefs = gql`
 	}
 `;
 
+// export the typeDefs
 module.exports = typeDefs;

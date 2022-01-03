@@ -1,9 +1,11 @@
 const { User, Book } = require('../models');
 const { AuthenticationError } = require('apollo-server-express');
 const { signToken } = require('../utils/auth');
+// const { param } = require('../routes');
 
 const resolvers = {
 	Query: {
+		//get a user by username
 		me: async (parent, args, context) => {
 			if (context.user) {
 				const userData = await User.findOne({})
@@ -44,6 +46,8 @@ const resolvers = {
 
 		saveBook: async (parent, args, context) => {
 			if (context.user) {
+				//   const savedBook = await Book.create({ ...args, username: context.user.username });
+
 				const updatedUser = await User.findByIdAndUpdate(
 					{ _id: context.user._id },
 					{ $addToSet: { savedBooks: args.input } },

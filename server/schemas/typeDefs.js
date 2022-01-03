@@ -1,5 +1,6 @@
 const { gql } = require('apollo-server-express');
 
+//graphql setup
 const typeDefs = gql`
 	type Book {
 		_id: ID!

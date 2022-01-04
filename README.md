@@ -2,7 +2,12 @@
 
 Created with MERN stack, React, and Graphql
 
-![License for GitHub repo](https://img.shields.io/github/license/BrigittePowers/wk14-tech-blogd)
+The Book Search engine allows a user to:
+
+- Search a book and be displayed book information from GoogleBooks api
+- Create (or login) to a(n) (existing) account
+- Save searched books to a list for viewing later
+- Delete books from the saved list if necessary
 
 ## Table of Contents
 
